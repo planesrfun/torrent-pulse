@@ -1,18 +1,18 @@
 {
-  "published_utc": "2026-11-23T22:45:02Z",
+  "published_utc": "2026-11-23T22:50:03Z",
   "schema_version": 1,
-  "snapshot_utc": "2026-11-23T22:45:02Z",
+  "snapshot_utc": "2026-11-23T22:50:03Z",
   "speeds": {
     "download_kib_s": 0,
-    "upload_kib_s": 454
+    "upload_kib_s": 7
   },
   "totals": {
-    "completed": 106,
+    "completed": 105,
     "downloading": 0,
     "incomplete": 0,
     "queued": 0,
-    "seeding": 104,
-    "total": 106
+    "seeding": 103,
+    "total": 105
   },
   "transfers": []
 }
