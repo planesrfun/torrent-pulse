@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1017">
+<meta name="description" content="Anonymised public Homelab torrent progress monitor">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'">
+<title>Torrent Pulse · Public Progress</title>
+<link rel="stylesheet" href="./app.css">
+<script defer src="./app.js"></script>
+</head>
+<body>
+<div class="shell">
+<header class="header">
+  <div class="brand"><span class="mark">◈</span><span><strong>Torrent Pulse</strong><small>HOMELAB · GITHUB PAGES</small></span></div>
+  <div class="connection"><span id="connection-dot" class="dot waiting"></span><span id="connection-label">Connecting</span><span id="updated" class="updated">—</span></div>
+</header>
+<main>
+<section class="intro">
+  <div><div class="eyebrow">PUBLIC · READ-ONLY · ANONYMISED</div><h1>Transfer overview<span class="accent">.</span></h1>
+  <p>A GitHub Pages snapshot of private seedbox activity. Torrent filenames and identities are never published.</p></div>
+  <div class="refresh-control"><span>GitHub snapshots</span><b>5–30m</b><button id="refresh" type="button" aria-label="Refresh published progress">↻</button></div>
+</section>
+<section class="metrics">
+  <div class="metric metric-primary"><div class="metric-label">↓ DOWNLOAD RATE</div><div id="downloadSpeed" class="metric-value">—</div><div class="metric-unit">last reported sample</div><div id="downloadRate" class="rate-small">—</div></div>
+  <div class="metric"><div class="metric-label">↑ UPLOAD RATE</div><div id="uploadSpeed" class="metric-value">—</div><div class="metric-unit">last reported sample</div></div>
+  <div class="metric"><div class="metric-label">ACTIVE DOWNLOADS</div><div id="active" class="metric-value">—</div><div class="metric-unit">snapshot count</div></div>
+  <div class="metric"><div class="metric-label">WAITING / QUEUED</div><div id="queued" class="metric-value">—</div><div class="metric-unit">snapshot count</div></div>
+</section>
+<section class="overview">
+  <div><div class="eyebrow">RECENT SNAPSHOTS IN THIS BROWSER</div><h2>Transfer activity</h2>
+  <p>Short bandwidth history; refreshes when a new GitHub snapshot is available</p></div>
+  <div class="legend"><span><i class="swatch dl"></i>Download</span><span><i class="swatch ul"></i>Upload</span></div>
+  <svg id="spark" viewBox="0 0 900 140" role="img" aria-label="Anonymised transfer rate history" preserveAspectRatio="none">
+    <path id="line-dl" fill="none" stroke="#63e6bc" stroke-width="2.5"></path>
+    <path id="line-ul" fill="none" stroke="#7f93ff" stroke-width="2.5"></path>
+  </svg>
+</section>
+<section class="torrent-panel">
+  <div class="panel-head"><div><div class="eyebrow">ANONYMOUS DOWNLOADS</div><h2>Current progress <span id="total" class="total">—</span></h2></div>
+    <div class="secondary-counts"><span id="completed">— complete</span><span id="incomplete">— incomplete</span></div></div>
+  <div class="table-head"><span>TRANSFER</span><span>PROGRESS</span><span>DOWNLOAD</span><span>UPLOAD</span><span>ETA</span></div>
+  <div id="torrents" class="torrent-list"><div class="empty">Loading the latest public snapshot…</div></div>
+  <div id="visible" class="footer-count">Public summary only · no torrent names, paths or identifiers</div>
+</section>
+<footer><span>◈ Torrent Pulse · Public progress</span><span id="published">No snapshot published yet</span></footer>
+</main>
+</div>
+</body>
+</html>
