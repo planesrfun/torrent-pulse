@@ -1,10 +1,10 @@
 {
-  "published_utc": "2026-11-26T02:20:03Z",
+  "published_utc": "2026-11-26T02:25:03Z",
   "schema_version": 1,
-  "snapshot_utc": "2026-11-26T02:20:03Z",
+  "snapshot_utc": "2026-11-26T02:25:03Z",
   "speeds": {
     "download_kib_s": 0,
-    "upload_kib_s": 10
+    "upload_kib_s": 9
   },
   "totals": {
     "completed": 104,
