@@ -1,27 +1,18 @@
 {
-  "published_utc": "2026-11-26T07:55:02Z",
+  "published_utc": "2026-11-26T08:00:02Z",
   "schema_version": 1,
-  "snapshot_utc": "2026-11-26T07:55:02Z",
+  "snapshot_utc": "2026-11-26T08:00:02Z",
   "speeds": {
-    "download_kib_s": 6611,
-    "upload_kib_s": 1447
+    "download_kib_s": 0,
+    "upload_kib_s": 47
   },
   "totals": {
-    "completed": 104,
-    "downloading": 1,
-    "incomplete": 1,
+    "completed": 105,
+    "downloading": 0,
+    "incomplete": 0,
     "queued": 0,
-    "seeding": 102,
+    "seeding": 103,
     "total": 105
   },
-  "transfers": [
-    {
-      "download_kib_s": 6611,
-      "eta_seconds": 0,
-      "label": "Downloading 1",
-      "progress_percent": 98.5,
-      "state": "downloading",
-      "upload_kib_s": 1447
-    }
-  ]
+  "transfers": []
 }
